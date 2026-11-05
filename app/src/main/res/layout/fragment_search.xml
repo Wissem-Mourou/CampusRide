@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Carte Recherche de Trajet -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/white"
+        app:strokeColor="@color/border_light"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rechercher un covoiturage"
+                android:textColor="@color/primary_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Ville de départ -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_depart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ville de départ"
+                app:startIconDrawable="@drawable/ic_location"
+                app:startIconTint="@color/primary_blue"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_depart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nabeul"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Ville d'arrivée -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_arrivee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ville d'arrivée / Campus"
+                app:startIconDrawable="@drawable/ic_school"
+                app:startIconTint="@color/accent_green"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_arrivee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ISET Nabeul"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Date de départ -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date de départ (AAAA-MM-JJ)"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginBottom="14dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2026-11-06"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Bouton Rechercher -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_search"
+                android:tag="search_trips_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Rechercher des trajets"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_search"
+                app:iconGravity="textStart"
+                app:cornerRadius="12dp"
+                app:backgroundTint="@color/primary_blue" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Liste des résultats -->
+    <TextView
+        android:id="@+id/tv_results_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="Trajets disponibles"
+        android:textColor="@color/primary_dark"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_trips"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:clipToPadding="false" />
+
+    <!-- Message aucun résultat -->
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_car"
+            app:tint="@color/text_hint"
+            android:contentDescription="Aucun trajet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aucun trajet ne correspond à votre recherche"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</LinearLayout>

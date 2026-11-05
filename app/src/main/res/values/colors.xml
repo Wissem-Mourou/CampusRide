@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palette officielle CampusRide -->
+    <color name="primary_dark">#163A5F</color>       <!-- Bleu foncé -->
+    <color name="primary_blue">#2878B5</color>       <!-- Bleu principal -->
+    <color name="accent_green">#20B486</color>       <!-- Vert émeraude -->
+    <color name="white">#FFFFFF</color>              <!-- Blanc -->
+    <color name="background_light">#F4F6F9</color>   <!-- Gris clair fond -->
+
+    <!-- Couleurs d'interface et états -->
+    <color name="surface_card">#FFFFFF</color>
+    <color name="text_primary">#0F2740</color>
+    <color name="text_secondary">#5A6E85</color>
+    <color name="text_hint">#9AA8B8</color>
+    <color name="border_light">#E2E8F0</color>
+    <color name="error_red">#D32F2F</color>
+    <color name="warning_orange">#F59E0B</color>
+    <color name="success_green">#10B981</color>
+    
+    <color name="primary_blue_light">#EBF3FA</color>
+    <color name="accent_green_light">#E6F8F3</color>
+</resources>

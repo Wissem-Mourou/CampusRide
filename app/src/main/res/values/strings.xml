@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">CampusRide</string>
+    <string name="app_tagline">Covoiturage universitaire simple &amp; économique</string>
+    
+    <!-- Authentification -->
+    <string name="title_login">Connexion</string>
+    <string name="title_register">Inscription</string>
+    <string name="welcome_back">Bon retour parmi nous !</string>
+    <string name="welcome_subtitle">Connectez-vous pour accéder à vos trajets universitaires</string>
+    <string name="register_subtitle">Rejoignez la communauté étudiante de covoiturage</string>
+    
+    <string name="label_email">Email universitaire</string>
+    <string name="hint_email">prenom.nom@univ.tn / @isetn.rnu.tn</string>
+    <string name="label_password">Mot de passe</string>
+    <string name="hint_password">••••••••</string>
+    <string name="label_confirm_password">Confirmer le mot de passe</string>
+    <string name="label_nom">Nom</string>
+    <string name="hint_nom">Ex: Ben Ali</string>
+    <string name="label_prenom">Prénom</string>
+    <string name="hint_prenom">Ex: Mohamed</string>
+    <string name="label_telephone">Numéro de téléphone</string>
+    <string name="hint_telephone">Ex: 98123456</string>
+    <string name="label_ville">Ville de résidence</string>
+    <string name="hint_ville">Ex: Nabeul, Tunis, Hammamet…</string>
+    
+    <string name="btn_login">Se connecter</string>
+    <string name="btn_register">Créer mon compte</string>
+    <string name="no_account">Pas encore de compte ?</string>
+    <string name="already_account">Vous avez déjà un compte ?</string>
+    <string name="link_register">Inscrivez-vous ici</string>
+    <string name="link_login">Connectez-vous</string>
+    
+    <!-- Validation et erreurs -->
+    <string name="err_empty_fields">Veuillez remplir tous les champs obligatoires</string>
+    <string name="err_invalid_email">Veuillez saisir un email universitaire valide (.tn / .rnu.tn / .edu)</string>
+    <string name="err_password_short">Le mot de passe doit comporter au moins 6 caractères</string>
+    <string name="err_passwords_not_match">Les mots de passe ne correspondent pas</string>
+    <string name="err_invalid_phone">Numéro de téléphone invalide (8 chiffres)</string>
+    <string name="err_network">Erreur réseau. Veuillez vérifier votre connexion</string>
+    
+    <!-- Navigation principale -->
+    <string name="nav_search">Rechercher</string>
+    <string name="nav_publish">Publier</string>
+    <string name="nav_my_trips">Mes trajets</string>
+    <string name="nav_profile">Profil</string>
+</resources>

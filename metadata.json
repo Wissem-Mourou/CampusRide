@@ -1,0 +1,6 @@
+{
+  "name": "CampusRide",
+  "description": "Application mobile de covoiturage universitaire entre villes et facultés tunisiennes",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

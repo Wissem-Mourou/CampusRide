@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme with Material 3 -->
+    <style name="Theme.CampusRide" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand Colors -->
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/primary_blue_light</item>
+        <item name="colorOnPrimaryContainer">@color/primary_dark</item>
+        
+        <item name="colorSecondary">@color/primary_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <item name="colorTertiary">@color/accent_green</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/accent_green_light</item>
+        <item name="colorOnTertiaryContainer">@color/primary_dark</item>
+
+        <!-- Background & Surface -->
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Legacy alias to prevent broken references -->
+    <style name="Theme.MyApplication" parent="Theme.CampusRide" />
+</resources>
